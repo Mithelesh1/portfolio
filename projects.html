@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Mithelesh Sharma</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+nav {
+  background: #2c3e50;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Default styles - already in file */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+}
+
+body.dark nav {
+  background-color: #111;
+}
+
+body.dark nav a {
+  color: #ddd;
+}
+
+body.dark .project {
+  background: #2c2c2c;
+  color: #eee;
+}
+
+body.dark a {
+  color: #66ccff;
+}
+/* Basic nav link styles */
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #f1c40f; /* golden yellow */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hover color change */
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* Active link highlight (if manually applied or via JS) */
+nav a.active {
+  color: #f1c40f;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Job Portal</h3>
+      <p>The Job Portal is a web-based platform designed to bridge the gap between job seekers and recruiters. It allows employers to post job openings and candidates to apply directly by uploading resumes.
+      </p>
+      <p>
+<strong>User Authentication:</strong> Separate login for Admin, Recruiters, and Applicants
+
+Job Listings: Employers can post, edit, and manage job openings</p>
+
+<p><strong>Resume Upload:</strong> Applicants can upload resumes and apply for jobs</p>
+
+<p><strong>Application Tracker:</strong> Employers can view and track job applications
+</p>
+<p><strong>Admin Panel:</strong> managing users, job categories, and overall portal control
+</p>
+<p><strong>Responsive UI:</strong> Mobile-friendly layout built using HTML/CSS
+</p> 
+      <p>
+      <strong>  Tech Stack:</strong>
+         HTML, CSS, PHP, MySQL
+
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Pet Care Hub</h3>
+      <p>Pet Care Hub is a web-based platform designed to connect pet owners with reliable pet care service providers such as walkers, sitters, and groomers. The platform streamlines the booking process and provides real-time availability for various pet services.
+</p>
+<p>User-Friendly Interface: Clean and responsive design for easy navigation</p>
+
+<p><strong> Listings:</strong> Browse and filter pet care services by type and location</p>
+
+<p><strong>Real-Time Bookings:</strong> Schedule appointments and receive instant confirmation</p>
+
+<p><strong>Provider Profiles:</strong> View detailed profiles of pet walkers/sitters with ratings</p>
+
+<p><strong>Notifications:</strong> Automated service reminders and booking status updates
+
+</p>
+<p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+    </div>
+
+    <div class="project">
+      <h3>Image Editor App</h3>
+      <p>The Image Editor App is a lightweight Android application designed for quick photo editing with powerful features tailored for everyday users. The app focuses on enhancing images through watermarking, background removal, and restoration — all while maintaining a simple and intuitive user interface.
+      </p>
+      <p><strong> Watermark:</strong> Insert custom text or logos as watermarks on photos</p>
+
+<p><strong>Background Removal:</strong> AI-assisted background erasing with preview feature</p>
+
+<p><strong>Photo Restoration:</strong> Enhance image quality, reduce blur, and adjust brightness</p>
+
+<p><strong>Offline Support:</strong> Most features work without internet connectivity</p>
+
+<p><strong>Tech Stack:</strong>PYTHON,HTML,CSS</p>
+    </div>
+  </section>
+ <script>
+  // Auto-apply theme from localStorage
+  window.onload = function() {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  }
+</script>
+
+</body>
+</html>

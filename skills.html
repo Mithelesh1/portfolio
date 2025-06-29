@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skills | Mithelesh Sharma</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+nav {
+  background: #2c3e50;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Default styles - already in file */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+}
+
+body.dark nav {
+  background-color: #111;
+}
+
+body.dark nav a {
+  color: #ddd;
+}
+
+body.dark .project {
+  background: #2c2c2c;
+  color: #eee;
+}
+
+body.dark a {
+  color: #66ccff;
+}
+/* Basic nav link styles */
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #f1c40f; /* golden yellow */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hover color change */
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* Active link highlight (if manually applied or via JS) */
+nav a.active {
+  color: #f1c40f;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+     <a href="about.html">About</a>
+  </nav>
+
+  <section style="padding: 3rem 1rem;">
+  <h2 style="text-align: center; margin-bottom: 2rem;">💼 My Skills</h2>
+
+  <!-- Languages -->
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #2c3e50; margin-bottom: 1rem;">🧠 Languages</h3>
+    <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <li><img src="icons/icons8-c-50.png" alt="C" width="24" /> C</li>
+      <li><img src="icons/icons8-html5-50.png" alt="HTML" width="24" /> HTML</li>
+      <li><img src="icons/icons8-css-50.png" alt="CSS" width="24" /> CSS</li>
+      <li><img src="icons/icons8-python-50.png" alt="Python" width="24" /> Python</li>
+      <li><img src="icons/icons8-javascript-50.png" alt="JavaScript" width="24" /> JavaScript</li>
+    </ul>
+  </div>
+
+  <!-- Tools -->
+  <div style="margin-bottom: 2rem;">
+    <h3 style="color: #2c3e50; margin-bottom: 1rem;">🛠️ Tools</h3>
+    <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <li><img src="icons/icons8-github-50.png" alt="GitHub" width="24" /> GitHub</li>
+      <li><img src="icons/icons8-vs-code-50.png" alt="VS Code" width="24" /> VS Code</li>
+      <li><img src="icons/icons8-figma-50.png" alt="Figma" width="24" /> Figma</li>
+    </ul>
+  </div>
+
+  <!-- Soft Skills -->
+  <div>
+    <h3 style="color: #2c3e50; margin-bottom: 1rem;">🤝 Soft Skills</h3>
+    <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
+      <li>🧑‍🤝‍🧑 Teamwork</li>
+      <li>⏰ Punctuality</li>
+      <li>📅 Time Management</li>
+      <li>🧠 Decision Making</li>
+    </ul>
+  </div>
+</section>
+
+
+  <script>
+  // Apply saved theme on page load
+  window.onload = function() {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    // Save theme preference
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  }
+</script>
+
+</body>
+</html>
